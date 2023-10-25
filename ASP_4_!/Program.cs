@@ -2,6 +2,8 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using ASP_4__;
 using ASP_4__.Objects;
+using Microsoft.Extensions.FileProviders;
+
 var builder = WebApplication.CreateBuilder(args);
 
 string connection = builder.Configuration.GetConnectionString("DefaultConnection");
@@ -11,33 +13,26 @@ var services = builder.Services;
 
 builder.Services.AddTransient<Zoo>();
 
+builder.Services.AddDirectoryBrowser();
+
 var app = builder.Build();
 
-app.UseMiddleware<Middleware>();
+app.UseMiddleware<AddZooMiddleware>();
+app.UseRouting();
+app.UseHttpsRedirection();
 
-app.MapGet("/", (ApplicationContext db) => db.Zoo.ToList());
+app.UseStaticFiles();
+app.UseDefaultFiles();
 
-
-app.MapPost("/addZoo", (string Name, int Workers_Ammount, int Aviary_Ammount, ApplicationContext db) =>
+app.UseEndpoints(endpoints =>
 {
-    Zoo new_zoo = new Zoo();
-    new_zoo.Name = Name;
-    new_zoo.Workers_Ammount = Workers_Ammount;
-    new_zoo.Aviary_Ammount = Aviary_Ammount;
-    db.Zoo.Add(new_zoo);
-    db.SaveChanges();
-    return new_zoo;
-});
-
-app.MapGet("/Zoo/{zoo_number:int}", async (int zoo_number, ApplicationContext db) =>
-{
-    Zoo? found_zoo = await db.Zoo.FirstOrDefaultAsync(u => u.Id == zoo_number);
-    if (found_zoo == null)
+    endpoints.MapGet("/", async context =>
     {
-        return Results.NotFound(new { message = "Зоопарк не знайдено" });
-    }
-    return Results.Json(found_zoo);
+    });
 });
+
+//app.MapGet("/", (ApplicationContext db) => db.Zoo.ToList());
+
 
 
 app.Run();

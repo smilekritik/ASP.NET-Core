@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OmdAikP4sCJpm6eKsVl2QCfjWEFUmvzHgFqkOuV36zocdR2ZlnXfkxPCxIO0iX9+t8J6h+Fz1VdONnIfOeaZ7w==",
+  "dgSpecHash": "1ALFM+DZ0MQXdbucydZKGph85KZq3Pf9hG1VQnFLfnP3rOR/Rm7t62OqcLA4jWbC7KAR2dWflWtU0eaiscs6pA==",
   "success": true,
-  "projectFilePath": "D:\\work\\ASP_4_!\\ASP_4_!\\ASP_4_!.csproj",
+  "projectFilePath": "D:\\work\\ASP.NET-Core\\ASP_4_!\\ASP_4_!.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kritik\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\kritik\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
@@ -41,6 +41,7 @@
     "C:\\Users\\kritik\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
     "C:\\Users\\kritik\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\kritik\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\kritik\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\kritik\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\kritik\\.nuget\\packages\\system.configuration.configurationmanager\\6.0.1\\system.configuration.configurationmanager.6.0.1.nupkg.sha512",
     "C:\\Users\\kritik\\.nuget\\packages\\system.console\\4.3.1\\system.console.4.3.1.nupkg.sha512",
